@@ -1,0 +1,314 @@
+/* Reset básico de CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--fundoPrincipal);
+  color: #333;
+}
+
+/* Remover estilos padrão de elementos comuns */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+/* Variaveis */
+:root{
+    --nav: #b799ff;
+    --fundoPrincipal: #ffffff;
+    --fundoSecundario: #d0bfff;
+    --icones:#f3e8ff;
+    --textos: #333333;
+    --textosSecundarios: #6c757d;
+}
+/* NAV */
+.nav{
+    width: 100%;
+    height: 78px;
+    background-color: var(--nav);
+    color: var(--textos);
+    display: flex;
+    justify-content: space-around;
+}
+.nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+.nav ul li{
+    font-size: 20px;
+}
+.nav ul li:hover{
+    transition: 0.3s;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* CONTAGEM */
+.div_banner{
+    width: 100%;
+    height: 700px;
+
+    background-image: url("fotos/banner/casamento-feliz-um-guia-para-casamentos-felizes.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.box_contagem{
+    width: 360px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--icones);
+    color: var(--textos);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.fake{
+    background-color: rgba(255, 255, 255, 0);
+}
+#contagem{
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+}
+#contagem div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* INFORMATIVOS */
+.informativos ,.confirmar_presença{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+.informativos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.informativos div h1{
+  color: var(--textos);
+}
+.informativos div i{
+    font-size: 31px;
+    color: var(--textos);
+}
+.confirmar_presença a{
+  width: 300px;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  background-color: var(--icones);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  color: var(--textos);
+}
+.confirmar_presença a:hover{
+  transform: scale(1.1);
+}
+/* NOSSA HISTORIA */
+.nossa-historia {
+  margin-top: 50px;
+  height: 1410px;
+  padding: 20px 20px;
+  background-color: var(--fundoSecundario);
+  text-align: center;
+}
+
+.nossa-historia h2 {
+  font-size: 2.5em;
+  color: var(--textos);
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.timeline .box{
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--nav);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  top: 150px;
+}
+
+.timeline-item .content {
+  background-color: var(--fundoPrincipal);
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-left: 6px solid #ba68c8;
+}
+
+.timeline-item.left .content {
+  margin-right: auto;
+}
+
+.timeline-item.right .content {
+  margin-left: auto;
+}
+
+.timeline-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.timeline-item .date {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--nav);
+}
+/* footer */
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1em;
+  border-top: 4px solid var(--nav);
+}
+
+@media (max-width: 414px) {
+  /* NAV */
+  .nav{
+    height: 40px;
+  }
+  .nav ul li{
+    font-size: 15px;
+  }
+  .nav ul li:hover{
+    font-size: 17px;
+  }
+  /* CONTAGEM */
+  .div_banner{
+    height: 400px;
+  }
+  .box_contagem{
+    width: 279px;
+    height: 138px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .box_contagem h1{
+    font-size: 29px;
+  }
+  .box_contagem h2{
+    font-size: 19px;
+  }
+  .fake{
+     background-color: rgba(255, 255, 255, 0);
+  }
+
+  /* INFORMATIVOS */
+  .informativos div i {
+    font-size: 22px;
+  }
+  .informativos div h1 {
+    font-size: 20px;
+  }
+  .informativos div h2 {
+    font-size: 15px;
+  }
+  .confirmar_presença a {
+    width: 203px;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  /* NOSSA HISTORIA */
+  .nossa-historia{
+    height: 723px;
+  }
+  .nossa-historia h2 {
+    font-size: 29px;
+  }
+  .timeline .box {
+    gap: 21px;
+    margin-bottom: 10px;
+  }
+  .timeline-item {
+    padding: 0px 0px;
+  }
+  .timeline-item .content {
+    padding: 7px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #ba68c8;
+  }
+  .timeline-item .content h3{
+    font-size: 15px;
+  }
+  .timeline-item .content p{
+    font-size: 10px;
+  }
+  
+  .timeline-item.right {
+    top: 70px;
+  }
+}
